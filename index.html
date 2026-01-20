@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">JBOY STICHES</div>
+
+    <div class="toggle-btn"> &#9776; </div>
+    <ul class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </ul>
+</nav>
+
+<section class="hero-slider">
+    <div class="slider-container">
+
+        <div class="slide"><img src="images//ankara3.jpg" alt=""></div>
+        <div class="slide"><img src="images//ankara2.jpg" alt=""></div>
+        <div class="slide"><img src="images//bridal1.jpg" alt=""></div>
+        <div class="slide"><img src="images//hero.jpg" alt=""></div>
+
+    </div>
+
+    <!-- Optional navigation -->
+    <div class="slider-nav">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
+</section>
+
+
+<h1 class="page-title">Welcome to Jboy Stiches</h1>
+
+<p>We design and sew perfect outfits customized to your size and preference.</p>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section brand">
+            <h2> JBOY STICHES </h2>
+            <p>Quality, style, and creativity tailored just for you.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Register</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h3>Contact Info</h3>
+            <p>Email: jboi1142@mail.com</p>
+            <p>Phone: +234 810 123 4567</p>
+            <p>Address: Kano, Nigeria</p>
+        </div>
+
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/bigpablo410" target="_blank"><img src="icons/alexander-shatov-71Qk8ODIBko-unsplash.jpg" alt=""></a>
+                <a href="https://www.tiktok.com/BIG PABLO" target="_blank"><img src="icons/alexander-shatov-I4p0FcjDBJI-unsplash.jpg" alt=""></a>
+                <a href="https://www.facebook.com/Paul Legba" target="_blank"><img src="icons//boliviainteligente-H88PXUVjd7U-unsplash.jpg" alt=""></a>
+                <a href="https://wa.me/2349118383505" class="whatsapp-float" target="_blank"><img src="icons/mariia-shalabaieva-4VhDqJy69vQ-unsplash.jpg" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Jboy Stiches. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="slider.js"></script>
+<script src="footer.js"></script>
+<script>
+    $(document).ready(function () {
+
+    // ===== Slide-down animation on page load =====
+    $("header").addClass("navbar-visible");
+
+    // ===== Mobile menu toggle =====
+    $(".toggle-btn").click(function () {
+        $(".nav-links").slideToggle(300);
+    });
+
+    // ===== Change navbar background when scrolling =====
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 40) {
+            $("header").addClass("nav-scrolled");
+        } else {
+            $("header").removeClass("nav-scrolled");
+        }
+    });
+
+    // ===== Active link highlight =====
+    $(".nav-links a").each(function () {
+        if (this.href === window.location.href) {
+            $(this).addClass("nav-active");
+        }
+    });
+});
+
+</script>
+</body>
+</html>
